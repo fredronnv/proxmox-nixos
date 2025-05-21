@@ -15,7 +15,7 @@ installBuild:
 
   isoImage.compressImage = false;
   isoImage.squashfsCompression = null;
-  isoImage.isoBaseName = "nixos-offline-installer";
+  isoImage.isoBaseName = "nixos-minimal-${config.system.nixos.label}-${pkgs.stdenv.hostPlatform.system}";
   isoImage.isoName = "${config.isoImage.isoBaseName}-${config.system.nixos.label}-${pkgs.stdenv.hostPlatform.system}.iso";
   isoImage.makeEfiBootable = true;
   isoImage.makeUsbBootable = true;
